@@ -36,8 +36,9 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="mainDiv">
       <input
+        onKeyDown={(e) => e.key === "Enter" && handleButtonClick()}
         placeholder="Inserte un pais"
         type="text"
         value={inputValue}
@@ -56,7 +57,7 @@ function App() {
             </div>
           ))
         : `Buscando pais`}
-    </>
+    </div>
   );
 }
 
